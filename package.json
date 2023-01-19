@@ -1,0 +1,22 @@
+{
+  "name": "server.js",
+  "version": "1.0.0",
+  "description": "pong-game",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AwalHossain/multi-player-pong-game.git"
+  },
+  "author": "awal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AwalHossain/multi-player-pong-game/issues"
+  },
+  "homepage": "https://github.com/AwalHossain/multi-player-pong-game#readme",
+  "dependencies": {
+    "socket.io": "^4.5.4"
+  }
+}
