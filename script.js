@@ -3,7 +3,7 @@ const { body } = document;
 const canvas = document.createElement('canvas');
 const context = canvas.getContext('2d');
 const width = 500;
-const height = 700;
+const height = 600;
 const screenWidth = window.screen.width;
 const canvasPosition = screenWidth / 2 - width / 2;
 const isMobile = window.matchMedia('(max-width: 600px)');
@@ -89,6 +89,20 @@ function createCanvas() {
   body.appendChild(canvas);
   renderCanvas();
 }
+
+
+// Wait for Opponents
+// function renderIntro() {
+//   // Canvas Background
+//   context.fillStyle = 'black';
+//   context.fillRect(0, 0, width, height);
+
+//   // Intro Text
+//   context.fillStyle = 'white';
+//   context.font = "32px Courier New";
+//   context.fillText("Waiting for opponent...", 20, (canvas.height / 2) - 30);
+// }
+
 
 // Reset Ball to Center
 function ballReset() {
