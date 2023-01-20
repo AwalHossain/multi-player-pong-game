@@ -94,7 +94,7 @@ function ballReset() {
     socket.emit('ballMove',{
     ballX,
     ballY,
-    score
+    score,
   });
 }
 
@@ -110,7 +110,7 @@ function ballMove() {
   socket.emit('ballMove',{
     ballX,
     ballY,
-    score
+    score,
   });
 }
 
@@ -233,5 +233,5 @@ socket.on('paddleMove', (paddleData)=>{
 })
 
 socket.on('ballMove', (ballData)=>{
-  ({ballX, ballY} = ballData);
+  ({ballX, ballY, score} = ballData);
 })
