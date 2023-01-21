@@ -17,7 +17,7 @@ const PORT = 3000;
 
 
 
-server.listen(PORT);
+httpServer.listen(PORT);
 console.log(`Listenning on port ${PORT}...`);
 
 sockets.listen(socketServer);
