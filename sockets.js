@@ -1,7 +1,7 @@
 
 let readyPlayerCount = 0;
 
-function socket (io){
+function listen (io){
     io.on('connection', (socket)=>{
         console.log("a user connected..", socket.id);
     
@@ -32,4 +32,6 @@ function socket (io){
 }
 
 
-module.exports = socket;
+module.exports = {
+    listen
+};
