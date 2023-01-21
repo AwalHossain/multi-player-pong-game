@@ -6,14 +6,14 @@ function listen (io){
 
     pongNamespace.on('connection', (socket)=>{
         let room;
-        console.log("a user connected..", socket.id);
+        console.log("a user connected..", socket.id, );
     
         socket.on('ready', ()=>{
 
             room = 'room' + Math.floor(readyPlayerCount/2);
             socket.join(room);
 
-            console.log("Player ready", socket.id);
+            console.log("Player ready", socket.id,room);
     
             readyPlayerCount++;
 
@@ -25,7 +25,7 @@ function listen (io){
     
     
         socket.on('paddleMove', (paddleData)=>{
-            socket.to().emit('paddleMove', paddleData);
+            socket.to(room).emit('paddleMove', paddleData);
         })
     
         socket.on('ballMove', (ballData)=>{
