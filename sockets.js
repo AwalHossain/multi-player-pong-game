@@ -1,7 +1,7 @@
 
 let readyPlayerCount = 0;
 function listen (io){
-    const pongNamespace = io.of('/pong');
+    const pongNamespace = io.of('');
   
 
     pongNamespace.on('connection', (socket)=>{
